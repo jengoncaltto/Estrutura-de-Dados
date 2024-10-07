@@ -201,12 +201,13 @@ public class Pilha
     }
 
     public void balanceado(String s){
-        /* EXERCÍCIO 5.
-            receber a String
-            verificar aonde existem pontuações
-            separar as pontuações em uma pilha
-            verificar se pilha pontuacao não está vazia, vazia == balanceado, não-vazia == outras verificacoes
-        */
+	/* 
+ 		EXERCÍCIO 5.
+	            receber a String
+	            verificar aonde existem pontuações
+	            separar as pontuações em uma pilha
+	            verificar se pilha pontuacao não está vazia, vazia == balanceado, não-vazia == outras verificacoes
+	        */
         Pilha pilhaString = new Pilha(s.length());
         Pilha pontuacao = new Pilha(s.length());
         Pilha pilhaAux = new Pilha(s.length());
@@ -274,6 +275,14 @@ public class Pilha
     }
 
     public Pilha palavraInvertida(String s){
+	    /* 
+     		EXERCICIO 6.
+	     		recebe string e transforma em pilha
+	       		pop na this e add na aux2 enqunato não encontrar espaço em branco
+		 	quando for espaço em branco dar pop em aux2 e add na aux1 para inversao 
+	   		adiciona o espaco que apareceu na this para o aux1 e voltar ao passo de pop na this e add na aux2
+	     		por fim pop da aux1 para this para inversao 
+	    */
         int j = s.length() -1;
         while(j > -1) {
             this.push(s.charAt(j));
