@@ -104,4 +104,50 @@ public class PilhaGenerica<T>
             System.out.print(this.pop() + " ");
         }
     }
+
+    public void pilhaSequencia(int inicial, int fim){
+      /*
+        EXERCÍCIO 8.
+            receber o numero inicial e o numero final da sequencia
+            iniciar dois "for" para criar os subarrays
+            concatena e adiciona cada subarray em uma pilhaSUbArray
+            verifica onde existem os dois unicos pares e se o segundo é maior que o primeiro
+            onde a string for os pares adiciona na pilhaUnicosPares
+     */
+        PilhaGenerica<String> pilhaSUBArray = new PilhaGenerica<>(this.n);
+        PilhaGenerica<String> auxSUBArray = new PilhaGenerica<>(this.n);
+
+        for (int i = inicial; i <= fim; i++){
+            String numeros = new String();
+            int index = i;
+            for (int j = i; j <= fim; j++){
+                numeros = numeros.concat(Integer.toString(j));
+                pilhaSUBArray.push(numeros);
+            }
+        }
+        while (!pilhaSUBArray.vazia()){   // while para inverter, ordenar e apresentar no formato correto(crescente) dos subarrays
+            String s = pilhaSUBArray.pop();
+            auxSUBArray.push(s);
+        }
+
+        System.out.println("Sua sequencia de Sub Arrays: ");
+        while(!auxSUBArray.vazia()){
+            String s = auxSUBArray.pop();
+            System.out.println(s);
+            pilhaSUBArray.push(s);
+        }
+
+        while (!pilhaSUBArray.vazia()){  // while para inverter, ordenar e apresentar no formato corretor dos numeros pares unicos
+            String s = pilhaSUBArray.pop();
+            auxSUBArray.push(s);
+        }
+        System.out.println("---------------------------");
+
+        while(!auxSUBArray.vazia()){
+            String s = auxSUBArray.pop();
+            if(s.length() == 2 && (s.charAt(1) > s.charAt(0))){
+                System.out.printf("\nPar unico: (%c, %c)", s.charAt(1), s.charAt(0));
+            }
+        }
+    }
 }

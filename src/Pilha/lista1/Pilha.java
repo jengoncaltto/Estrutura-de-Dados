@@ -279,8 +279,8 @@ public class Pilha
      		EXERCICIO 6.
 	     		recebe string e transforma em pilha
 	       		pop na this e add na aux2 enqunato não encontrar espaço em branco
-		 	quando for espaço em branco dar pop em aux2 e add na aux1 para inversao 
-	   		adiciona o espaco que apareceu na this para o aux1 e voltar ao passo de pop na this e add na aux2
+		 	    quando for espaço em branco dar pop em aux2 e add na aux1 para inversao
+	   		    adiciona o espaco que apareceu na this para o aux1 e voltar ao passo de pop na this e add na aux2
 	     		por fim pop da aux1 para this para inversao 
 	    */
         int j = s.length() -1;
@@ -318,6 +318,4 @@ public class Pilha
         this.apresentaPilha();
         return this;
     }
-
-
 }

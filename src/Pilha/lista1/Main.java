@@ -44,6 +44,12 @@ public class Main {
         pilhaInvertida.palavraInvertida(s);
         */
 
-
+        /* EXERCICIO 8.
+        int indiceInicial = 1;
+        int indiceFinal = 5;
+        int tampilhaSequencia = ((indiceFinal*(indiceFinal+1)))/2;
+        PilhaGenerica<String> pilhaSequencia = new PilhaGenerica<>(tampilhaSequencia);
+        pilhaSequencia.pilhaSequencia(indiceInicial, indiceFinal);
+        */
     }
 }

@@ -64,6 +64,7 @@ subsequências (subarrays) possíveis a partir da sequência original. Para toda
 subsequências geradas, encontre a quantidade de pares únicos (a, b), em que ‘a’ é diferente
 de ‘b’ e ‘a’ é máximo (maior número) e ‘b’ é o segundo máximo da subsequência. Por exemplo,
 em uma sequência de 1 até 5, podem ser formadas as seguintes 15 subsequências:
+                <br>
 1               <br> 
 1 2             <br>
 1 2 3           <br>
