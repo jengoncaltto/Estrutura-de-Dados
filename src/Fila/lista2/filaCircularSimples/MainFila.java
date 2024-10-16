@@ -1,7 +1,7 @@
-package filaCircularSimples;
+package Fila.lista2.filaCircularSimples;
 import java.util.Scanner;
 
-public class Main
+public class MainFila
 {
 	public static void main(String args[])
 	{
@@ -15,7 +15,7 @@ public class Main
 			
 			switch(escolha) {
 			case 0:
-				//Não faz nada
+				//Nï¿½o faz nada
 				break;
 			case 1:
 				System.out.println("Entre com o item para adicionar: ");
@@ -31,7 +31,7 @@ public class Main
 					System.out.println("Fila vazia.");
 				break;
 			case 3:
-				System.out.println("Conteúdo da fila:");
+				System.out.println("Conteï¿½do da fila:");
 				fila.imprime();
 				break;        
 			}

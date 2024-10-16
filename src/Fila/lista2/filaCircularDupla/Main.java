@@ -1,4 +1,4 @@
-package filaCircularDupla;
+package Fila.lista2.filaCircularDupla;
 
 import java.util.Scanner;
 
@@ -16,7 +16,7 @@ public class Main
 
 			switch(escolha) {
 			case 0:
-				//Não faz nada
+				//Nï¿½o faz nada
 				break;
 			case 1:
 				System.out.println("Entre com o item para adicionar no fim da fila: ");
@@ -32,7 +32,7 @@ public class Main
 					System.out.println("Fila vazia.");
 				break;
 			case 3:
-				System.out.println("Entre com o item para adicionar no início da fila: ");
+				System.out.println("Entre com o item para adicionar no inï¿½cio da fila: ");
 				item = scanner.nextInt();
 				if ( ! fila.insereInicio(item) )
 					System.out.println("Fila cheia.");
@@ -45,7 +45,7 @@ public class Main
 					System.out.println("Fila vazia.");
 				break;
 			case 5:
-				System.out.println("Conteúdo da fila:");
+				System.out.println("Conteï¿½do da fila:");
 				fila.imprime();
 				break;
 			}

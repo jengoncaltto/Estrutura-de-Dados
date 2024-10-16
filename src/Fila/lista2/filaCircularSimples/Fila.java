@@ -1,4 +1,4 @@
-package filaCircularSimples;
+package Fila.lista2.filaCircularSimples;
 
 public class Fila
 {
@@ -26,7 +26,7 @@ public class Fila
 		return (n == tamanho);
 	}
 	
-	//Retiramos o elemento do in�cio da fila
+	//Retiramos o elemento do inicio da fila
 	public int remove()
 	{
 		int elemento = Integer.MIN_VALUE;
@@ -55,4 +55,38 @@ public class Fila
 	  else
 	    return false;
 	}
+	public void imprime()
+	{
+		int i, j;
+
+		if (vazia())
+			System.out.println("Fila está vazia.");
+		else
+			for (i = ini, j = 1; j <= n; j = j + 1, i = (i + 1) % tamanho)
+				System.out.println(j + " " + vetor[i]);
+	}
+
+	public void combinaFilas(Fila f1, Fila f2){
+		/*
+			EXERCICIO 2.
+			receber as filas 1 e 2
+			receber elemento da f1 e adicionar na this
+			receber elemento da f2 e adicionar na this
+			até as duas ficarem vazias
+		*/
+		int e;
+		while(!f1.vazia() && !f2.vazia()){
+			if(!f1.vazia() || !this.cheia()) {
+				e = f1.remove();
+				this.insere(e);
+			}
+			if(!f2.vazia() || !this.cheia()){
+				e = f2.remove();
+				this.insere(e);
+			}
+		}
+
+		this.imprime();
+	}
+
 }

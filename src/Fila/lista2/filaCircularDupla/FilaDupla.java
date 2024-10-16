@@ -1,6 +1,6 @@
-package filaCircularDupla;
+package Fila.lista2.filaCircularDupla;
 
-import filaCircularSimples.Fila;
+import Fila.lista2.filaCircularSimples.Fila;
 
 public class FilaDupla extends Fila
 {
@@ -15,10 +15,10 @@ public class FilaDupla extends Fila
 		
 		if (!cheia())
 		{
-			/* Insere na posição precedente ao início */
+			/* Insere na posiï¿½ï¿½o precedente ao inï¿½cio */
 			prec = (ini - 1 + tamanho) % tamanho;
 			vetor[prec] = elemento;
-			ini = prec; /* Atualiza índice para início */
+			ini = prec; /* Atualiza ï¿½ndice para inï¿½cio */
 			n++;
 			return true;
 		} 
@@ -33,7 +33,7 @@ public class FilaDupla extends Fila
 
 		if (!this.vazia())
 		{
-			/* Retira o último elemento */
+			/* Retira o ï¿½ltimo elemento */
 			ult = (ini + n - 1) % tamanho;
 			elemento = vetor[ult];
 			n--;
