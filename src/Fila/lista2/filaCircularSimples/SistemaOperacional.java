@@ -7,7 +7,7 @@ public class SistemaOperacional {
 
     public SistemaOperacional(String nome) {
         this.nome = nome;
-        this.filaProcessos = new FilaGenerica<>(10);
+        this.filaProcessos = new FilaGenerica<>(2);
     }
 
     public boolean inserirProcesso(int id, String tempo){

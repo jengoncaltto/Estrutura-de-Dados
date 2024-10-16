@@ -6,6 +6,7 @@ public class MainExercicios {
             EXERICIO 1 */
         SistemaOperacional op = new SistemaOperacional("Linux");
         op.inserirProcesso(20231210, "4.01");
+        op.inserirProcesso(20231211, "4.02");
         op.imprimeListaProcessos();
 
 

@@ -12,7 +12,7 @@ public class FilaGenerica<T> {
     public FilaGenerica(int tam)
     {
         tamanho = tam;
-        vetor = new Vector<T>(tamanho);
+        vetor = new Vector<>(tamanho);
         ini = 0;
         n = 0;
     }
@@ -26,7 +26,7 @@ public class FilaGenerica<T> {
         return (n == tamanho);
     }
 
-    //Retiramos o elemento do in�cio da fila
+    //Retiramos o elemento do inicio da fila
     public T remove()
     {
         T elemento = null;
@@ -48,7 +48,7 @@ public class FilaGenerica<T> {
 
         if ( !cheia() ) {
             fim = (ini + n) % tamanho;
-            vetor.set(fim, elemento);
+            vetor.add(fim, elemento);
             n++;
             return true;
         }
@@ -58,6 +58,8 @@ public class FilaGenerica<T> {
     public void imprime()
     {
         int i, j;
+        T a = null;
+        FilaGenerica<T> aux = new FilaGenerica<>(this.tamanho);
 
         if (this.vazia())
             System.out.println("Fila está vazia.");
