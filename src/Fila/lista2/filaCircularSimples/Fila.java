@@ -1,5 +1,9 @@
 package Fila.lista2.filaCircularSimples;
 
+import Fila.lista2.filaCircularDupla.FilaDupla;
+
+import java.util.Arrays;
+
 public class Fila
 {
 	/* Atributos protected para serem usados na subclasse. */
@@ -55,6 +59,11 @@ public class Fila
 	  else
 	    return false;
 	}
+
+	public int getTamanho() {
+		return tamanho;
+	}
+
 	public void imprime()
 	{
 		int i, j;
@@ -66,9 +75,19 @@ public class Fila
 				System.out.println(j + " " + vetor[i]);
 	}
 
+	@Override
+	public String toString() {
+		return "Fila{" +
+				"tamanho= " + tamanho +
+				", vetor= " + Arrays.toString(vetor) +
+				", ini= " + ini +
+				", n= " + n +
+				'}';
+	}
+
 	public void combinaFilas(Fila f1, Fila f2){
 		/*
-			EXERCICIO 2.
+			LISTA 2. EXERCICIO 2.
 			receber as filas 1 e 2
 			receber elemento da f1 e adicionar na this
 			receber elemento da f2 e adicionar na this
@@ -85,8 +104,19 @@ public class Fila
 				this.insere(e);
 			}
 		}
-
 		this.imprime();
+	}
+
+	public static FilaDupla FilaCirularPDupla(Fila fila, int tam){
+		/*
+			LISTA2. EXERCICIO 4.
+		*/
+		FilaDupla filaDupla = new FilaDupla(tam);
+
+		while(!fila.vazia()){
+			filaDupla.insere(fila.remove());
+		}
+		return filaDupla;
 	}
 
 }

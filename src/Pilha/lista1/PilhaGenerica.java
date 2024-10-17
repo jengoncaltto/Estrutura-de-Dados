@@ -1,5 +1,8 @@
 package Pilha.lista1;
 
+import Fila.lista2.filaCircularSimples.Fila;
+
+import java.util.Arrays;
 import java.util.Vector;
 
 public class PilhaGenerica<T>
@@ -69,7 +72,7 @@ public class PilhaGenerica<T>
 
     public void removerObjeto(T elemento){
          /*
-        EXERCÍCIO 4.
+        LISTA 1. EXERCÍCIO 4.
             receber o objeto
             criar pilha auxiliar
             procurar e adicionar na pilha auxiliar
@@ -107,7 +110,7 @@ public class PilhaGenerica<T>
 
     public void pilhaSequencia(int inicial, int fim){
       /*
-        EXERCÍCIO 8.
+        LISTA1. EXERCÍCIO 8.
             receber o numero inicial e o numero final da sequencia
             iniciar dois "for" para criar os subarrays
             concatena e adiciona cada subarray em uma pilhaSUbArray
@@ -149,5 +152,26 @@ public class PilhaGenerica<T>
                 System.out.printf("\nPar unico: (%c, %c)", s.charAt(1), s.charAt(0));
             }
         }
+    }
+
+    public void apresentaPilha(){
+        PilhaGenerica<T> pilhaAux = new PilhaGenerica<>(this.n);
+        T t = null;
+        while(!this.vazia()){
+            t = this.pop();
+            pilhaAux.push(t);
+            System.out.println(t);
+        }
+        while (!pilhaAux.vazia()){
+            t = pilhaAux.pop();
+            this.push(t);
+        }
+    }
+    @Override
+    public String toString() {
+        return "PilhaGenerica{" +
+                " vetor= " +  Arrays.toString(this.vetor.toArray()) +
+                ", topo= " + topo +
+                '}';
     }
 }

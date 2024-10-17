@@ -2,6 +2,8 @@ package Fila.lista2.filaCircularDupla;
 
 import Fila.lista2.filaCircularSimples.Fila;
 
+import java.util.Arrays;
+
 public class FilaDupla extends Fila
 {
 	public FilaDupla(int tam)
@@ -41,4 +43,13 @@ public class FilaDupla extends Fila
 		
 		return elemento;
 	}
+	public String toString() {
+		return "Fila{" +
+				"tamanho= " + tamanho +
+				", vetor= " + Arrays.toString(vetor) +
+				", ini= " + ini +
+				", n= " + n +
+				'}';
+	}
+
 }

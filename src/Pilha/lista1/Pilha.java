@@ -1,4 +1,7 @@
 package Pilha.lista1;
+
+import java.util.Arrays;
+
 public class Pilha
 {
     private int n; /* Tamanho da pilha */
@@ -84,6 +87,14 @@ public class Pilha
         return this.topo;
     }
 
+    @Override
+    public String toString() {
+        return "Pilha{ " +
+                "vetor= " + Arrays.toString(vetor) +
+                ", topo= " + topo +
+                '}';
+    }
+
     public Pilha transformaEmPilha(String s)
     {
         int j = 0;
@@ -111,7 +122,7 @@ public class Pilha
     public boolean verificaCadeiaXcY()
     {
 		/*
-		EXERCÍCIO 1.
+		LISTA 1. EXERCÍCIO 1.
 			Recebe pilha de chars
 			separa a primeira parte em uma pilha para inversão
 			compara tamanho e se a pilha original é igual pilha invertida
@@ -143,7 +154,7 @@ public class Pilha
     public boolean verificaCadeiaAdB()
     {
 		/*
-		EXERCÍCIO 2.
+		LISTA 1. EXERCÍCIO 2.
 			receber a pilha
 			adicionar ate o ponto D, em uma pilha D caracteres
 			chamar o método verificaCadeiaAdB
@@ -169,7 +180,7 @@ public class Pilha
     public char[] arrayPilhas(Pilha p2)
     {
         /*
-		EXERCÍCIO 3.
+		LISTA 1. EXERCÍCIO 3.
 			receber a segunda pilha
 			criar o vetor
 			determinar o tamanho do array de acordo com o tamanho das pilhas
@@ -202,7 +213,7 @@ public class Pilha
 
     public void balanceado(String s){
 	/* 
- 		EXERCÍCIO 5.
+ 		LISTA 1. EXERCÍCIO 5.
 	            receber a String
 	            verificar aonde existem pontuações
 	            separar as pontuações em uma pilha
@@ -276,7 +287,7 @@ public class Pilha
 
     public Pilha palavraInvertida(String s){
 	    /* 
-     		EXERCICIO 6.
+     		LISTA 1. EXERCICIO 6.
 	     		recebe string e transforma em pilha
 	       		pop na this e add na aux2 enqunato não encontrar espaço em branco
 		 	    quando for espaço em branco dar pop em aux2 e add na aux1 para inversao

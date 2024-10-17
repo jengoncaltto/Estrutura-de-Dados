@@ -6,20 +6,21 @@ public class SistemaOperacional {
     private Processo processo;
 
     public SistemaOperacional(String nome) {
-        this.nome = nome;
-        this.filaProcessos = new FilaGenerica<>(2);
+        nome = nome;
+        filaProcessos = new FilaGenerica<>(5);
     }
 
-    public boolean inserirProcesso(int id, String tempo){
-        this.processo = new Processo(id, tempo);
+    public boolean inserirProcesso(int id){
+        this.processo = new Processo(id);
+
         if(filaProcessos.cheia()){
             return false;
+        }else {
+            filaProcessos.insere(processo);
+            return true;
         }
-        filaProcessos.insere(processo);
-        return true;
     }
-
-    public boolean retiraMaiorTempo(){
+    public boolean retiraMaiorTempoNaFila(){
         if(filaProcessos.vazia()){
             return false;
         }
@@ -28,6 +29,8 @@ public class SistemaOperacional {
     }
 
     public void imprimeListaProcessos(){
-            filaProcessos.imprime();
+        System.out.println("---------------------------");
+        System.out.println("FILA DE PROCESSOS: ");
+        filaProcessos.imprime();
     }
 }
