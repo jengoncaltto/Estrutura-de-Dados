@@ -26,7 +26,7 @@ public class MainExercicios {
 
         /*
             EXERCICIO 3
-            FILA DE PILHAS*/
+            FILA DE PILHAS
 
         Pilha p1 = new Pilha(2); p1.push('a'); p1.push('b');
         Pilha p2 = new Pilha(2); p2.push('j'); p2.push('k');
@@ -38,7 +38,7 @@ public class MainExercicios {
         filaPilhas.insere(p3);
         filaPilhas.imprime();
 
-                 /*PILHA DE FILAS*/
+                 /*PILHA DE FILAS
 
         Fila f1 = new Fila(2); f1.insere(1);   f1.insere(2);
         Fila f2 = new Fila(2); f2.insere(7); f2.insere(8);
@@ -48,8 +48,7 @@ public class MainExercicios {
         pf.push(f2);
         pf.apresentaPilha();
 
-
-            /* FILA DE FILAS */
+                /*FILA DE FILAS
 
         Fila f3 = new Fila(2); f3.insere(1); f3.insere(2);
         Fila f4 = new Fila(2); f4.insere(1); f4.insere(1);
@@ -58,7 +57,7 @@ public class MainExercicios {
         ff.insere(f3);
         ff.insere(f4);
         ff.imprime();
-
+         */
 
         /*
          EXERCICIO 4.
@@ -72,6 +71,8 @@ public class MainExercicios {
         filaDupla.imprime();
         */
 
-
+        /*  LISTA2. EXERCICIO 5
+        Binario.mostraFilaBinarios(16);
+         */
     }
 }

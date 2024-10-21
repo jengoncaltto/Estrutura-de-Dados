@@ -64,7 +64,15 @@ public class Fila
 		return tamanho;
 	}
 
-	public void imprime()
+    public int getN() {
+        return n;
+    }
+
+    public int getIni() {
+        return ini;
+    }
+
+    public void imprime()
 	{
 		int i, j;
 
