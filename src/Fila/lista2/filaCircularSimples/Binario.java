@@ -1,5 +1,7 @@
 package Fila.lista2.filaCircularSimples;
 
+import java.security.PrivateKey;
+
 public class Binario {
     /*
       recebe o numero
@@ -7,8 +9,11 @@ public class Binario {
       devolve o resultado
      */
 
+    public Binario() {
+    }
+
     public static String calculaBinario(int numero){
-        String binario = "";
+        String binario = null;
         String aux;
         if(numero == 1){
             binario = "1";

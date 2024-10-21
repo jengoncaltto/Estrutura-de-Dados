@@ -3,7 +3,7 @@ import Pilha.lista1.Pilha;
 public class MainExercicios {
     public static void main(String[] args) {
         /*
-            EXERCICIO 1
+            LISTA 2. EXERCICIO 1
         SistemaOperacional op = new SistemaOperacional("Linux");
         op.inserirProcesso(20231210);
         op.inserirProcesso(20231211);
@@ -12,7 +12,7 @@ public class MainExercicios {
         op.imprimeListaProcessos();*/
 
         /*
-            EXERCICIO 2
+            LISTA 2. EXERCICIO 2
         Fila f1 = new Fila(5);
         Fila f2 = new Fila(5);
         Fila fila = new Fila(f1.tamanho + f2.tamanho);
@@ -25,7 +25,7 @@ public class MainExercicios {
         fila.combinaFilas(f1,f2); */
 
         /*
-            EXERCICIO 3
+            LISTA 2. EXERCICIO 3
             FILA DE PILHAS
 
         Pilha p1 = new Pilha(2); p1.push('a'); p1.push('b');
@@ -60,7 +60,7 @@ public class MainExercicios {
          */
 
         /*
-         EXERCICIO 4.
+         LISTA2. EXERCICIO 4.
         Fila fila = new Fila(5);
         fila.insere(1);
         fila.insere(2);
@@ -71,8 +71,8 @@ public class MainExercicios {
         filaDupla.imprime();
         */
 
-        /*  LISTA2. EXERCICIO 5
-        Binario.mostraFilaBinarios(16);
-         */
+        /*  LISTA2. EXERCICIO 5 */
+        System.out.println(Binario.mostraFilaBinarios(6));
+
     }
 }
