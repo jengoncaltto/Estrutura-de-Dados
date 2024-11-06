@@ -70,6 +70,10 @@ public class PilhaGenerica<T>
             return false;
     }
 
+    public int getTopo() {
+        return topo;
+    }
+
     public void removerObjeto(T elemento){
          /*
         LISTA 1. EXERCÍCIO 4.

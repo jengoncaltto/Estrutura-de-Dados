@@ -1,0 +1,59 @@
+EXERCÍCIO 1:
+
+    a. O(n+m)
+    b. O(n^2)
+    c. O(nlogn)
+
+    ORDEM: a < c < b
+
+EXERCÍCIO 2:
+
+                 Termo Dominante        O()
+           a)      0.001n^5            n^5
+           b)      50nlog10 n          n log10 n
+           c)      2.5 n^1.75          n^1.75
+           d)      n^2 log2 n          n^2
+           e)      n log2 n            n log2 n
+           f)      3 log8 n            log8 n
+           g)      0.01n^2             n^2
+           h)      100n^2              n^2
+           i)      0.5n^1.25           n^1.25
+           j)      n(log2 n)^2         n(log2 n)^2
+           k)      n^3                 n^3
+           l)      0.003 log4 n        log4 n
+
+EXERCÍCIO 3:
+
+i) A complexidade é O(n), onde n é o tamanho do array(vetor).
+  No pior caso, a função passará pelo vetor inteiro para encontrar o valor desejado, o que
+  requer verificar cada elemento uma vez. Se o valor for encontrado no início do array,
+  a função retornará mais cedo, mas o pior cenário permanece O(n).
+
+2) A complexidade é O(n), onde n é o tamanho do array(vetor).
+ No pior caso, a função pode precisar passar pelo vetor inteiro para encontrar o valor desejado.
+ Se o valor for encontrado no início do array, a função retornará mais cedo, mas o pior caso
+ como estar em última posição ou varrer o vetor inteiro e determinar que o valor não se encontra
+ permanece O(n).
+
+3) A complexidade é O(log n), onde n é a quantidade de elementos no array de entrada(vetor). O algoritmo
+ dividindo várias vezes o intervalo de busca pela metade fazendo cada comparação reduzir o tamanho do espaço
+ de busca, levando a um número logarítmico de passos em relação ao tamanho da entrada.
+
+
+EXERCÍCIO 4:
+- package Complexidade.lista3.pilha
+Complexidade de recursão para atribuir elementos na pilha 0(1) * n vezes
+Complexidade de recursão para contar os pares 0(1) * n vezes
+total: 0(n) + 0(n) = 0(n)
+
+EXERCÍCIO 5:
+O loop externo vai de 0 a n-1, iterando n-1 vezes. O loop interno vai de j+1 a n, que em média é executado
+cerca de n/2 vezes para cada iteração do loop externo. Portanto, o número total de comparações feitas é
+aproximadamente (n-1) * (n/2), levando a uma complexidade de tempo de O(n^2) nos piores casos e nos casos médios.
+O melhor caso também resulta em O(n^2) porque o algoritmo não aproveita nenhuma ordem existente na entrada
+independente do vetor estar ordenado ou não.
+- CÁLCULO
+Complexidade do for - O(n), dentro de outro for repetirá n^2 vezes
+Complexidade das atribuicoes, dos if's e return's é O(1)
+Multiplicando O(n^2) * O(1) = O(n^2)
+Complexidade do algoritmo no pior caso é O(n^2)
